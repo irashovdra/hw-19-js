@@ -1,15 +1,15 @@
-class Account {
-  constructor({ login, email }) {
-    this.login = login;
-    this.email = email;
-  }
-  
-  getInfo() {
-    return `Login: ${this.login}, Email: ${this.email}`;
-  }
+function Account({ login, email }) {
+  this.login = login;
+  this.email = email;
+
+  this.getInfo = function() {
+    return `Login: ${this.login},
+     Email: ${this.email}`;
+  };
 }
 
-console.log(typeof Account.prototype.getInfo); // function
+console.log(typeof
+  Account.prototype.getInfo); // function
 
 const mango = new Account({
   login: "Mangozedog",
